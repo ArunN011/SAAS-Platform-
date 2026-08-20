@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Projects | Stackly SaaS</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="project.css"
+    >
+
+</head>
+
+
+<body>
+
+    <div
+        class="dashboard-overlay"
+        id="dashboardOverlay"
+    ></div>
+
+
+    <aside
+        class="dashboard-sidebar"
+        id="dashboardSidebar"
+    >
+
+        <div class="sidebar-header">
+
+            <a
+                href="project.html"
+                class="dashboard-brand"
+            >
+
+                <img
+                    src="Assets/BrownLogo.webp"
+                    alt="Stackly"
+                >
+
+            </a>
+
+            <button
+                class="sidebar-close"
+                id="sidebarClose"
+                aria-label="Close menu"
+            >
+
+                <i class="bi bi-x-lg"></i>
+
+            </button>
+
+        </div>
+
+
+        <div class="sidebar-user">
+
+            <div class="sidebar-user-avatar">
+
+                <i class="bi bi-person-fill"></i>
+
+            </div>
+
+            <div class="sidebar-user-info">
+
+                <strong id="sidebarUserEmail">
+                    User
+                </strong>
+
+                <span>
+                    SaaS User
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="sidebar-section-label">
+            WORKSPACE
+        </div>
+
+
+        <nav class="sidebar-navigation">
+
+            <a
+                href="userdashboard.html"
+                class="sidebar-link"
+            >
+
+                <i class="bi bi-grid-1x2-fill"></i>
+
+                Dashboard
+
+            </a>
+
+
+            <a
+                href="projects.html"
+                class="sidebar-link active"
+            >
+
+                <i class="bi bi-kanban"></i>
+
+                Projects
+
+            </a>
+
+
+            <a
+                href="analytics.html"
+                class="sidebar-link"
+            >
+
+                <i class="bi bi-bar-chart"></i>
+
+                Analytics
+
+            </a>
+
+
+
+        </nav>
+
+
+        <div class="sidebar-section-label">
+            ACCOUNT
+        </div>
+
+
+        <nav class="sidebar-navigation">
+
+            <a
+                href="myaccount.html"
+                class="sidebar-link"
+            >
+
+                <i class="bi bi-person"></i>
+
+                My Profile
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+
+            <button
+                type="button"
+                class="sidebar-logout"
+                id="logoutButton"
+            >
+
+                <i class="bi bi-box-arrow-right"></i>
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <main class="dashboard-main">
+
+
+        <header class="dashboard-topbar">
+
+  
+    <div class="dashboard-topbar-left">
+
+        
+        <a
+            href="index.html"
+            class="mobile-dashboard-brand"
+            aria-label="Stackly Home"
+        >
+
+            <img
+                src="Assets/BrownLogo.webp"
+                alt="Stackly"
+            >
+
+        </a>
+
+
+     
+        <div class="dashboard-page-title">
+
+            <span>
+                ACCOUNT
+            </span>
+
+            <h1>
+                My Account
+            </h1>
+
+        </div>
+
+    </div>
+
+    <div class="dashboard-topbar-right">
+
+
+        <button
+            type="button"
+            class="topbar-icon-btn"
+            aria-label="Search"
+        >
+
+            <i class="bi bi-search"></i>
+
+        </button>
+
+
+    
+        <button
+            type="button"
+            class="topbar-icon-btn notification-button"
+            aria-label="Notifications"
+        >
+
+            <i class="bi bi-bell"></i>
+
+            <span class="notification-dot"></span>
+
+        </button>
+
+
+     
+        <div class="topbar-user">
+
+            <div class="topbar-avatar">
+
+                <i class="bi bi-person-fill"></i>
+
+            </div>
+
+
+            <div>
+
+                <strong id="topbarUserName">
+                    User
+                </strong>
+
+                <span>
+                    user
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="mobile-menu-btn"
+            id="mobileMenuButton"
+            aria-label="Open sidebar"
+            aria-expanded="false"
+        >
+
+            <i class="bi bi-list"></i>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+
+
+        <div class="projects-content">
+
+
+            
+
+            <section class="projects-heading">
+
+                <div>
+
+                    <span class="section-eyebrow">
+                        PROJECT MANAGEMENT
+                    </span>
+
+                    <h2>
+                        Your projects
+                    </h2>
+
+                    <p>
+                        Manage active work, monitor progress
+                        and keep your team aligned.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="error.html"
+                    class="new-project-btn"
+                >
+
+                    <i class="bi bi-plus-lg"></i>
+
+                    New Project
+
+                </a>
+
+            </section>
+
+
+            <section class="project-stats">
+
+                <div class="project-stat">
+
+                    <div class="project-stat-icon purple">
+                        <i class="bi bi-kanban"></i>
+                    </div>
+
+                    <span>
+                        Total Projects
+                    </span>
+
+                    <strong>
+                        24
+                    </strong>
+
+                    <small>
+                        Across workspace
+                    </small>
+
+                </div>
+
+
+                <div class="project-stat">
+
+                    <div class="project-stat-icon green">
+                        <i class="bi bi-activity"></i>
+                    </div>
+
+                    <span>
+                        Active
+                    </span>
+
+                    <strong>
+                        08
+                    </strong>
+
+                    <small>
+                        Currently running
+                    </small>
+
+                </div>
+
+
+                <div class="project-stat">
+
+                    <div class="project-stat-icon blue">
+                        <i class="bi bi-check-circle"></i>
+                    </div>
+
+                    <span>
+                        Completed
+                    </span>
+
+                    <strong>
+                        12
+                    </strong>
+
+                    <small>
+                        Successfully delivered
+                    </small>
+
+                </div>
+
+
+                <div class="project-stat">
+
+                    <div class="project-stat-icon orange">
+                        <i class="bi bi-clock"></i>
+                    </div>
+
+                    <span>
+                        Due Soon
+                    </span>
+
+                    <strong>
+                        04
+                    </strong>
+
+                    <small>
+                        Within 7 days
+                    </small>
+
+                </div>
+
+            </section>
+
+
+            <section class="project-toolbar">
+
+                <div class="project-search">
+
+                    <i class="bi bi-search"></i>
+
+                    <input
+                        type="search"
+                        id="projectSearch"
+                        placeholder="Search projects..."
+                    >
+
+                </div>
+
+
+                <div class="project-filters">
+
+                    <select id="projectStatusFilter">
+
+                        <option value="all">
+                            All Status
+                        </option>
+
+                        <option value="progress">
+                            In Progress
+                        </option>
+
+                        <option value="completed">
+                            Completed
+                        </option>
+
+                        <option value="review">
+                            Review
+                        </option>
+
+                    </select>
+
+
+                    <select id="projectSort">
+
+                        <option value="recent">
+                            Recently Updated
+                        </option>
+
+                        <option value="name">
+                            Project Name
+                        </option>
+
+                        <option value="progress">
+                            Progress
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </section>
+
+
+
+
+            <section class="projects-grid">
+
+
+            
+
+                <article
+                    class="project-card"
+                    data-name="SaaS Platform Redesign"
+                    data-status="progress"
+                    data-progress="78"
+                >
+
+                    <div class="project-card-top">
+
+                        <div class="project-main-icon purple">
+
+                            <i class="bi bi-window-stack"></i>
+
+                        </div>
+
+
+                        <span class="project-status progress">
+                            In Progress
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        SaaS Platform Redesign
+                    </h3>
+
+
+                    <p>
+                        Improving the workspace experience
+                        and introducing a cleaner dashboard system.
+                    </p>
+
+
+                    <div class="project-team">
+
+                        <div class="team-avatar">
+                            AK
+                        </div>
+
+                        <div class="team-avatar">
+                            SM
+                        </div>
+
+                        <div class="team-avatar">
+                            RV
+                        </div>
+
+                        <span>
+                            +5 team members
+                        </span>
+
+                    </div>
+
+
+                    <div class="project-progress">
+
+                        <div>
+
+                            <span>
+                                Progress
+                            </span>
+
+                            <strong>
+                                78%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="progress-track">
+
+                            <span
+                                style="width:78%"
+                            ></span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-card-footer">
+
+                        <span>
+                            Updated 2 hours ago
+                        </span>
+
+                        <a
+                            href="error.html"
+                            class="project-arrow"
+                        >
+
+                            <i class="bi bi-arrow-up-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <article
+                    class="project-card"
+                    data-name="Analytics Dashboard"
+                    data-status="progress"
+                    data-progress="56"
+                >
+
+                    <div class="project-card-top">
+
+                        <div class="project-main-icon blue">
+
+                            <i class="bi bi-bar-chart"></i>
+
+                        </div>
+
+
+                        <span class="project-status progress">
+                            In Progress
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Analytics Dashboard
+                    </h3>
+
+
+                    <p>
+                        Centralizing business performance metrics
+                        and real-time workspace insights.
+                    </p>
+
+
+                    <div class="project-team">
+
+                        <div class="team-avatar">
+                            AR
+                        </div>
+
+                        <div class="team-avatar">
+                            JP
+                        </div>
+
+                        <div class="team-avatar">
+                            MK
+                        </div>
+
+                        <span>
+                            +3 team members
+                        </span>
+
+                    </div>
+
+
+                    <div class="project-progress">
+
+                        <div>
+
+                            <span>
+                                Progress
+                            </span>
+
+                            <strong>
+                                56%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="progress-track blue-track">
+
+                            <span
+                                style="width:56%"
+                            ></span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-card-footer">
+
+                        <span>
+                            Updated yesterday
+                        </span>
+
+                        <a
+                            href="error.html"
+                            class="project-arrow"
+                        >
+
+                            <i class="bi bi-arrow-up-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <article
+                    class="project-card"
+                    data-name="Team Collaboration"
+                    data-status="completed"
+                    data-progress="100"
+                >
+
+                    <div class="project-card-top">
+
+                        <div class="project-main-icon green">
+
+                            <i class="bi bi-people"></i>
+
+                        </div>
+
+
+                        <span class="project-status completed">
+                            Completed
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Team Collaboration
+                    </h3>
+
+
+                    <p>
+                        Unified communication and team
+                        coordination workflows.
+                    </p>
+
+
+                    <div class="project-team">
+
+                        <div class="team-avatar">
+                            DK
+                        </div>
+
+                        <div class="team-avatar">
+                            NS
+                        </div>
+
+                        <div class="team-avatar">
+                            PJ
+                        </div>
+
+                        <span>
+                            +7 team members
+                        </span>
+
+                    </div>
+
+
+                    <div class="project-progress">
+
+                        <div>
+
+                            <span>
+                                Progress
+                            </span>
+
+                            <strong>
+                                100%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="progress-track green-track">
+
+                            <span
+                                style="width:100%"
+                            ></span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-card-footer">
+
+                        <span>
+                            Completed 2 days ago
+                        </span>
+
+                        <a
+                            href="error.html"
+                            class="project-arrow"
+                        >
+
+                            <i class="bi bi-arrow-up-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article
+                    class="project-card"
+                    data-name="Security Review"
+                    data-status="review"
+                    data-progress="32"
+                >
+
+                    <div class="project-card-top">
+
+                        <div class="project-main-icon orange">
+
+                            <i class="bi bi-shield-check"></i>
+
+                        </div>
+
+
+                        <span class="project-status review">
+                            Review
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Security Review
+                    </h3>
+
+
+                    <p>
+                        Reviewing workspace security controls,
+                        access policies and compliance requirements.
+                    </p>
+
+
+                    <div class="project-team">
+
+                        <div class="team-avatar">
+                            VS
+                        </div>
+
+                        <div class="team-avatar">
+                            RK
+                        </div>
+
+                        <span>
+                            +2 team members
+                        </span>
+
+                    </div>
+
+
+                    <div class="project-progress">
+
+                        <div>
+
+                            <span>
+                                Progress
+                            </span>
+
+                            <strong>
+                                32%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="progress-track orange-track">
+
+                            <span
+                                style="width:32%"
+                            ></span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-card-footer">
+
+                        <span>
+                            Updated 4 days ago
+                        </span>
+
+                        <a
+                            href="error.html"
+                            class="project-arrow"
+                        >
+
+                            <i class="bi bi-arrow-up-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </section>
+
+
+            <div
+                id="noProjects"
+                class="no-projects"
+            >
+
+                <i class="bi bi-folder2-open"></i>
+
+                <h3>
+                    No projects found
+                </h3>
+
+                <p>
+                    Try changing your search or filter.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"
+    ></script>
+
+    <script
+        src="project.js"
+    ></script>
+
+</body>
+
+</html>

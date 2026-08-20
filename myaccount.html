@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My Account | Stackly SaaS</title>
+
+
+    <!-- Bootstrap -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <!-- Bootstrap Icons -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+
+    <!-- Font -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <link
+        rel="stylesheet"
+        href="myaccount.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <div
+        class="dashboard-overlay"
+        id="dashboardOverlay"
+    ></div>
+
+
+
+
+    <aside
+        class="dashboard-sidebar"
+        id="dashboardSidebar"
+    >
+
+
+
+        <div class="sidebar-header">
+
+            <a
+                href="myaccount.html"
+                class="dashboard-brand"
+            >
+
+                <img
+                    src="Assets/BrownLogo.webp"
+                    alt="Stackly"
+                >
+
+            </a>
+
+
+            <button
+                type="button"
+                class="sidebar-close"
+                id="sidebarClose"
+                aria-label="Close sidebar"
+            >
+
+                <i class="bi bi-x-lg"></i>
+
+            </button>
+
+        </div>
+
+
+
+        <div class="sidebar-user">
+
+            <div class="sidebar-user-avatar">
+
+                <i class="bi bi-person-fill"></i>
+
+            </div>
+
+
+            <div class="sidebar-user-info">
+
+                <strong id="sidebarUserEmail">
+                    User
+                </strong>
+
+                <span>
+                    SaaS User
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+
+        <div class="sidebar-section-label">
+
+            WORKSPACE
+
+        </div>
+
+
+        <nav class="sidebar-navigation">
+
+            <a
+                href="userdashboard.html"
+                class="sidebar-link"
+            >
+
+                <i class="bi bi-grid-1x2-fill"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="project.html"
+                class="sidebar-link"
+            >
+
+                <i class="bi bi-kanban"></i>
+
+                <span>
+                    Projects
+                </span>
+
+            </a>
+
+
+            <a
+                href="analytics.html"
+                class="sidebar-link"
+            >
+
+                <i class="bi bi-bar-chart"></i>
+
+                <span>
+                    Analytics
+                </span>
+
+            </a>
+
+        </nav>
+
+
+
+        <div class="sidebar-section-label account-label">
+
+            ACCOUNT
+
+        </div>
+
+
+        <nav class="sidebar-navigation">
+
+            <a
+                href="myaccount.html"
+                class="sidebar-link active"
+            >
+
+                <i class="bi bi-person"></i>
+
+                <span>
+                    My Account
+                </span>
+
+            </a>
+
+        </nav>
+
+
+
+
+        <div class="sidebar-footer">
+
+            <button
+                type="button"
+                class="sidebar-logout"
+                id="logoutButton"
+            >
+
+                <i class="bi bi-box-arrow-right"></i>
+
+                <span>
+                    Logout
+                </span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+  
+
+    <main class="dashboard-main">
+
+
+   
+
+        <header class="dashboard-topbar">
+
+  
+    <div class="dashboard-topbar-left">
+
+   
+        <a
+            href="index.html"
+            class="mobile-dashboard-brand"
+            aria-label="Stackly Home"
+        >
+
+            <img
+                src="Assets/BrownLogo.webp"
+                alt="Stackly"
+            >
+
+        </a>
+
+
+        <!-- Desktop Page Title -->
+        <div class="dashboard-page-title">
+
+            <span>
+                ACCOUNT
+            </span>
+
+            <h1>
+                My Account
+            </h1>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- RIGHT -->
+    <div class="dashboard-topbar-right">
+
+
+        <!-- Search - desktop/tablet -->
+        <button
+            type="button"
+            class="topbar-icon-btn"
+            aria-label="Search"
+        >
+
+            <i class="bi bi-search"></i>
+
+        </button>
+
+
+        <!-- Notification - desktop/tablet -->
+        <button
+            type="button"
+            class="topbar-icon-btn notification-button"
+            aria-label="Notifications"
+        >
+
+            <i class="bi bi-bell"></i>
+
+            <span class="notification-dot"></span>
+
+        </button>
+
+
+        <!-- Desktop User -->
+        <div class="topbar-user">
+
+            <div class="topbar-avatar">
+
+                <i class="bi bi-person-fill"></i>
+
+            </div>
+
+
+            <div>
+
+                <strong id="topbarUserName">
+                    User
+                </strong>
+
+                <span>
+                    user
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Mobile Hamburger -->
+        <button
+            type="button"
+            class="mobile-menu-btn"
+            id="mobileMenuButton"
+            aria-label="Open sidebar"
+            aria-expanded="false"
+        >
+
+            <i class="bi bi-list"></i>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+       
+
+        <div class="account-content">
+
+
+        
+
+            <section class="account-hero">
+
+
+                <!-- Avatar -->
+
+                <div class="account-avatar-large">
+
+                    <i class="bi bi-person-fill"></i>
+
+                </div>
+
+
+                <!-- Information -->
+
+                <div class="account-hero-info">
+
+                    <span>
+                        MY ACCOUNT
+                    </span>
+
+
+                    <h2 id="accountHeroName">
+                        User
+                    </h2>
+
+
+                    <p id="accountHeroEmail">
+                        user@example.com
+                    </p>
+
+
+                    <div class="account-status">
+
+                        <i class="bi bi-check-circle-fill"></i>
+
+                        Active Account
+
+                    </div>
+
+                </div>
+
+
+                <!-- Edit -->
+
+                <a
+                    href="error.html"
+                    class="edit-profile-btn"
+                >
+
+                    <i class="bi bi-pencil"></i>
+
+                    Edit Profile
+
+                </a>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ACCOUNT GRID
+            ================================================== -->
+
+            <section class="account-grid">
+
+
+                <!-- =================================================
+                     PERSONAL INFORMATION
+                ================================================== -->
+
+                <article class="account-panel">
+
+                    <div class="account-panel-header">
+
+                        <div>
+
+                            <span>
+                                PROFILE
+                            </span>
+
+                            <h3>
+                                Personal Information
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="account-form-grid">
+
+
+                        <div class="account-field">
+
+                            <label>
+                                FULL NAME
+                            </label>
+
+                            <div
+                                class="account-value"
+                                id="accountFullName"
+                            >
+                                User
+                            </div>
+
+                        </div>
+
+
+                        <div class="account-field">
+
+                            <label>
+                                EMAIL ADDRESS
+                            </label>
+
+                            <div
+                                class="account-value"
+                                id="accountEmail"
+                            >
+                                user@example.com
+                            </div>
+
+                        </div>
+
+
+                        <div class="account-field">
+
+                            <label>
+                                ROLE
+                            </label>
+
+                            <div
+                                class="account-value"
+                                id="accountRole"
+                            >
+                                SaaS User
+                            </div>
+
+                        </div>
+
+
+                        <div class="account-field">
+
+                            <label>
+                                ACCOUNT STATUS
+                            </label>
+
+                            <div class="account-value active-value">
+
+                                <i class="bi bi-circle-fill"></i>
+
+                                Active
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     SECURITY
+                ================================================== -->
+
+                <article class="account-panel">
+
+                    <div class="account-panel-header">
+
+                        <div>
+
+                            <span>
+                                SECURITY
+                            </span>
+
+                            <h3>
+                                Account Security
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="security-list">
+
+
+                        <!-- Password -->
+
+                        <div class="security-item">
+
+                            <div class="security-icon">
+
+                                <i class="bi bi-shield-lock"></i>
+
+                            </div>
+
+
+                            <div class="security-item-content">
+
+                                <strong>
+                                    Password
+                                </strong>
+
+                                <span>
+                                    Your password is protected
+                                </span>
+
+                            </div>
+
+
+                            <a href="error.html">
+
+                                Change
+
+                                <i class="bi bi-arrow-up-right"></i>
+
+                            </a>
+
+                        </div>
+
+
+
+                        <!-- Two Factor -->
+
+                        <div class="security-item">
+
+                            <div class="security-icon">
+
+                                <i class="bi bi-phone"></i>
+
+                            </div>
+
+
+                            <div class="security-item-content">
+
+                                <strong>
+                                    Two-factor authentication
+                                </strong>
+
+                                <span>
+                                    Add another layer of security
+                                </span>
+
+                            </div>
+
+
+                            <a href="error.html">
+
+                                Configure
+
+                                <i class="bi bi-arrow-up-right"></i>
+
+                            </a>
+
+                        </div>
+
+
+
+                        <!-- Activity -->
+
+                        <div class="security-item">
+
+                            <div class="security-icon">
+
+                                <i class="bi bi-clock-history"></i>
+
+                            </div>
+
+
+                            <div class="security-item-content">
+
+                                <strong>
+                                    Login activity
+                                </strong>
+
+                                <span>
+                                    Review recent account activity
+                                </span>
+
+                            </div>
+
+
+                            <a href="error.html">
+
+                                View
+
+                                <i class="bi bi-arrow-up-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     RECENT ACTIVITY
+                ================================================== -->
+
+                <article class="account-panel">
+
+
+                    <div class="account-panel-header">
+
+                        <div>
+
+                            <span>
+                                ACTIVITY
+                            </span>
+
+                            <h3>
+                                Recent Activity
+                            </h3>
+
+                        </div>
+
+
+                        <a
+                            href="error.html"
+                            class="panel-view-link"
+                        >
+
+                            View all
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+
+
+                    <div class="account-activity-list">
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-dot blue"></div>
+
+
+                            <div class="activity-main">
+
+                                <strong>
+                                    Project updated
+                                </strong>
+
+                                <span>
+                                    SaaS Platform Redesign
+                                </span>
+
+                            </div>
+
+
+                            <small>
+                                2h ago
+                            </small>
+
+                        </div>
+
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-dot purple"></div>
+
+
+                            <div class="activity-main">
+
+                                <strong>
+                                    Analytics viewed
+                                </strong>
+
+                                <span>
+                                    Productivity Overview
+                                </span>
+
+                            </div>
+
+
+                            <small>
+                                Yesterday
+                            </small>
+
+                        </div>
+
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-dot green"></div>
+
+
+                            <div class="activity-main">
+
+                                <strong>
+                                    Task completed
+                                </strong>
+
+                                <span>
+                                    Dashboard optimization
+                                </span>
+
+                            </div>
+
+
+                            <small>
+                                2 days ago
+                            </small>
+
+                        </div>
+
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-dot orange"></div>
+
+
+                            <div class="activity-main">
+
+                                <strong>
+                                    Account accessed
+                                </strong>
+
+                                <span>
+                                    Secure login detected
+                                </span>
+
+                            </div>
+
+
+                            <small>
+                                4 days ago
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     QUICK ACTIONS
+                ================================================== -->
+
+                <article class="account-panel">
+
+                    <div class="account-panel-header">
+
+                        <div>
+
+                            <span>
+                                QUICK ACTIONS
+                            </span>
+
+                            <h3>
+                                Manage Account
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="quick-actions">
+
+
+                        <a href="error.html">
+
+                            <span class="quick-action-icon">
+
+                                <i class="bi bi-pencil-square"></i>
+
+                            </span>
+
+                            <span class="quick-action-text">
+                                Edit Profile
+                            </span>
+
+                            <i
+                                class="bi bi-arrow-up-right quick-action-arrow"
+                            ></i>
+
+                        </a>
+
+
+
+                        <a href="error.html">
+
+                            <span class="quick-action-icon">
+
+                                <i class="bi bi-lock"></i>
+
+                            </span>
+
+                            <span class="quick-action-text">
+                                Change Password
+                            </span>
+
+                            <i
+                                class="bi bi-arrow-up-right quick-action-arrow"
+                            ></i>
+
+                        </a>
+
+
+
+                        <a href="error.html">
+
+                            <span class="quick-action-icon">
+
+                                <i class="bi bi-bell"></i>
+
+                            </span>
+
+                            <span class="quick-action-text">
+                                Notification Settings
+                            </span>
+
+                            <i
+                                class="bi bi-arrow-up-right quick-action-arrow"
+                            ></i>
+
+                        </a>
+
+
+
+                        <button
+                            type="button"
+                            id="accountLogout"
+                        >
+
+                            <span class="quick-action-icon">
+
+                                <i class="bi bi-box-arrow-right"></i>
+
+                            </span>
+
+                            <span class="quick-action-text">
+                                Logout
+                            </span>
+
+                            <i
+                                class="bi bi-arrow-up-right quick-action-arrow"
+                            ></i>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- GSAP -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"
+    ></script>
+
+
+ 
+
+    <script
+        src="myaccount.js"
+    ></script>
+
+</body>
+
+</html>

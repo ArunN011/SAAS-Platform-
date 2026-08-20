@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Admin Analytics | Stackly</title>
+
+
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+
+ 
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <link
+        rel="stylesheet"
+        href="adminanalytics.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <div
+        class="analytics-overlay"
+        id="analyticsOverlay"
+    ></div>
+
+
+
+    <aside
+        class="analytics-sidebar"
+        id="analyticsSidebar"
+    >
+
+        <div class="analytics-sidebar-header">
+
+            <a
+                href="adminanalytics.html"
+                class="analytics-brand"
+            >
+
+                <img
+                    src="Assets/BrownLogo.webp"
+                    alt="Stackly"
+                >
+
+            </a>
+
+
+            <button
+                type="button"
+                class="analytics-sidebar-close"
+                id="analyticsSidebarClose"
+            >
+
+                <i class="bi bi-x-lg"></i>
+
+            </button>
+
+        </div>
+
+
+        <div class="analytics-admin-card">
+
+            <div class="analytics-admin-avatar">
+
+                <i class="bi bi-shield-lock-fill"></i>
+
+            </div>
+
+
+            <div>
+
+                <strong id="sidebarAdminEmail">
+                    Admin
+                </strong>
+
+                <span>
+                    Administrator
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="analytics-nav-label">
+            WORKSPACE
+        </div>
+
+
+        <nav class="analytics-navigation">
+
+            <a
+                href="admindashboard.html"
+                class="analytics-nav-link"
+            >
+
+                <i class="bi bi-grid-1x2-fill"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="adminanalytics.html"
+                class="analytics-nav-link active"
+            >
+
+                <i class="bi bi-bar-chart"></i>
+
+                <span>
+                    Analytics
+                </span>
+
+            </a>
+
+
+            <a
+                href="adminreports.html"
+                class="analytics-nav-link"
+            >
+
+                <i class="bi bi-file-earmark-text"></i>
+
+                <span>
+                    Reports
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <div class="analytics-sidebar-footer">
+
+            <button
+                type="button"
+                class="analytics-logout"
+                id="analyticsLogout"
+            >
+
+                <i class="bi bi-box-arrow-right"></i>
+
+                <span>
+                    Logout
+                </span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <main class="analytics-main">
+
+
+      
+
+       <header class="analytics-topbar">
+
+    <div class="analytics-topbar-left">
+
+        <a
+            href="adminanalytics.html"
+            class="analytics-mobile-brand"
+        >
+
+            <img
+                src="Assets/BrownLogo.webp"
+                alt="Stackly"
+            >
+
+        </a>
+
+
+        <div class="analytics-page-title">
+
+            <span>
+                ADMIN WORKSPACE
+            </span>
+
+            <h1>
+                Analytics
+            </h1>
+
+        </div>
+
+    </div>
+
+
+    <div class="analytics-topbar-right">
+
+        <div class="live-status">
+            <span class="live-status-dot"></span>
+            <span>Live</span>
+        </div>
+
+        <button
+            type="button"
+            class="analytics-topbar-icon"
+        >
+            <i class="bi bi-search"></i>
+        </button>
+
+        <button
+            type="button"
+            class="analytics-topbar-icon"
+        >
+            <i class="bi bi-bell"></i>
+            <span class="notification-dot"></span>
+        </button>
+
+        <div class="analytics-topbar-user">
+
+            <div class="analytics-topbar-avatar">
+                <i class="bi bi-shield-lock-fill"></i>
+            </div>
+
+            <div>
+                <strong id="topbarAdminName">
+                    Admin
+                </strong>
+
+                <span>
+                    Administrator
+                </span>
+            </div>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="analytics-mobile-menu"
+            id="analyticsMobileMenu"
+            aria-label="Open sidebar"
+            aria-expanded="false"
+        >
+
+            <i class="bi bi-list"></i>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+        <div class="analytics-content">
+
+
+         
+
+            <section class="analytics-page-header">
+
+                <div>
+
+                    <span class="analytics-eyebrow">
+                        REAL-TIME PLATFORM INTELLIGENCE
+                    </span>
+
+                    <h2>
+                        See what's happening
+                        <span>
+                            right now.
+                        </span>
+                    </h2>
+
+                    <p>
+                        Monitor user activity, infrastructure,
+                        product usage and business performance
+                        from a single live view.
+                    </p>
+
+                </div>
+
+
+                <div class="analytics-live-card">
+
+                    <div class="analytics-live-pulse">
+
+                        <span></span>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            All systems operational
+                        </strong>
+
+                        <span>
+                            Last updated
+                            <b id="lastUpdated">
+                                13:22:14
+                            </b>
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="analytics-kpis">
+
+
+                <article class="analytics-kpi">
+
+                    <div class="analytics-kpi-top">
+
+                        <div class="analytics-kpi-icon users">
+                            <i class="bi bi-people"></i>
+                        </div>
+
+                        <span class="trend-up">
+                            +8.6%
+                        </span>
+
+                    </div>
+
+                    <span>
+                        Active Users
+                    </span>
+
+                    <strong
+                        id="activeUsers"
+                    >
+                        9,624
+                    </strong>
+
+                    <small>
+                        Live users on platform
+                    </small>
+
+                </article>
+
+
+
+                <article class="analytics-kpi">
+
+                    <div class="analytics-kpi-top">
+
+                        <div class="analytics-kpi-icon projects">
+                            <i class="bi bi-kanban"></i>
+                        </div>
+
+                        <span class="trend-up">
+                            +12.4%
+                        </span>
+
+                    </div>
+
+                    <span>
+                        Active Projects
+                    </span>
+
+                    <strong>
+                        438
+                    </strong>
+
+                    <small>
+                        Projects currently running
+                    </small>
+
+                </article>
+
+
+
+                <article class="analytics-kpi">
+
+                    <div class="analytics-kpi-top">
+
+                        <div class="analytics-kpi-icon revenue">
+                            <i class="bi bi-graph-up-arrow"></i>
+                        </div>
+
+                        <span class="trend-up">
+                            +14.2%
+                        </span>
+
+                    </div>
+
+                    <span>
+                        Monthly Revenue
+                    </span>
+
+                    <strong>
+                        $84.2K
+                    </strong>
+
+                    <small>
+                        Current month
+                    </small>
+
+                </article>
+
+
+
+                <article class="analytics-kpi">
+
+                    <div class="analytics-kpi-top">
+
+                        <div class="analytics-kpi-icon uptime">
+                            <i class="bi bi-activity"></i>
+                        </div>
+
+                        <span class="trend-stable">
+                            Stable
+                        </span>
+
+                    </div>
+
+                    <span>
+                        System Uptime
+                    </span>
+
+                    <strong>
+                        99.9%
+                    </strong>
+
+                    <small>
+                        Across all services
+                    </small>
+
+                </article>
+
+            </section>
+
+
+
+            <section class="analytics-main-grid">
+
+
+ 
+
+                <div class="analytics-panel activity-chart-panel">
+
+                    <div class="analytics-panel-header">
+
+                        <div>
+
+                            <span>
+                                LIVE ACTIVITY
+                            </span>
+
+                            <h3>
+                                User Activity
+                            </h3>
+
+                        </div>
+
+
+                        <div class="chart-time">
+
+                            <button
+                                class="active"
+                            >
+                                24H
+                            </button>
+
+                            <button>
+                                7D
+                            </button>
+
+                            <button>
+                                30D
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="analytics-chart-meta">
+
+                        <div>
+
+                            <strong>
+                                9,624
+                            </strong>
+
+                            <span>
+                                active users
+                            </span>
+
+                        </div>
+
+
+                        <div class="chart-live-indicator">
+
+                            <span></span>
+
+                            Updating live
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="analytics-large-chart">
+
+                        <canvas
+                            id="liveActivityChart"
+                        ></canvas>
+
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="analytics-panel distribution-panel">
+
+                    <div class="analytics-panel-header">
+
+                        <div>
+
+                            <span>
+                                SUBSCRIPTIONS
+                            </span>
+
+                            <h3>
+                                Plan Distribution
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="distribution-chart">
+
+                        <canvas
+                            id="planDistributionChart"
+                        ></canvas>
+
+
+                        <div class="distribution-center">
+
+                            <strong>
+                                12.8K
+                            </strong>
+
+                            <span>
+                                Total users
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="distribution-list">
+
+
+                        <div>
+
+                            <span>
+
+                                <i class="dot-free"></i>
+
+                                Free
+
+                            </span>
+
+                            <strong>
+                                7,420
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+
+                                <i class="dot-pro"></i>
+
+                                Pro
+
+                            </span>
+
+                            <strong>
+                                4,260
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+
+                                <i class="dot-enterprise"></i>
+
+                                Enterprise
+
+                            </span>
+
+                            <strong>
+                                1,160
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+      
+
+            <section class="analytics-secondary-grid">
+
+
+         
+                <div class="analytics-panel">
+
+                    <div class="analytics-panel-header">
+
+                        <div>
+
+                            <span>
+                                PLATFORM TRAFFIC
+                            </span>
+
+                            <h3>
+                                Hourly Usage
+                            </h3>
+
+                        </div>
+
+
+                        <span class="peak-badge">
+                            Peak 11:00 AM
+                        </span>
+
+                    </div>
+
+
+                    <div class="hourly-chart">
+
+                        <canvas
+                            id="hourlyTrafficChart"
+                        ></canvas>
+
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="analytics-panel">
+
+                    <div class="analytics-panel-header">
+
+                        <div>
+
+                            <span>
+                                INFRASTRUCTURE
+                            </span>
+
+                            <h3>
+                                System Performance
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="performance-list">
+
+
+                        <div class="performance-item">
+
+                            <div class="performance-top">
+
+                                <span>
+                                    API Response
+                                </span>
+
+                                <strong>
+                                    118ms
+                                </strong>
+
+                            </div>
+
+
+                            <div class="performance-track">
+
+                                <span
+                                    style="width:82%"
+                                ></span>
+
+                            </div>
+
+                            <small>
+                                Excellent
+                            </small>
+
+                        </div>
+
+
+
+                        <div class="performance-item">
+
+                            <div class="performance-top">
+
+                                <span>
+                                    Database
+                                </span>
+
+                                <strong>
+                                    72ms
+                                </strong>
+
+                            </div>
+
+
+                            <div class="performance-track">
+
+                                <span
+                                    style="width:91%"
+                                ></span>
+
+                            </div>
+
+                            <small>
+                                Excellent
+                            </small>
+
+                        </div>
+
+
+
+                        <div class="performance-item">
+
+                            <div class="performance-top">
+
+                                <span>
+                                    Server Load
+                                </span>
+
+                                <strong>
+                                    34%
+                                </strong>
+
+                            </div>
+
+
+                            <div class="performance-track">
+
+                                <span
+                                    style="width:34%"
+                                ></span>
+
+                            </div>
+
+                            <small>
+                                Normal
+                            </small>
+
+                        </div>
+
+
+
+                        <div class="performance-item">
+
+                            <div class="performance-top">
+
+                                <span>
+                                    Storage
+                                </span>
+
+                                <strong>
+                                    62%
+                                </strong>
+
+                            </div>
+
+
+                            <div class="performance-track">
+
+                                <span
+                                    style="width:62%"
+                                ></span>
+
+                            </div>
+
+                            <small>
+                                Healthy
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+
+            <section class="analytics-panel live-events-panel">
+
+                <div class="analytics-panel-header">
+
+                    <div>
+
+                        <span>
+                            REAL-TIME EVENT STREAM
+                        </span>
+
+                        <h3>
+                            Live Platform Events
+                        </h3>
+
+                    </div>
+
+
+                    <div class="event-stream-status">
+
+                        <span></span>
+
+                        LIVE
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="live-events-list"
+                    id="liveEventsList"
+                >
+
+
+                    <div class="live-event">
+
+                        <div class="live-event-icon blue">
+
+                            <i class="bi bi-person-plus"></i>
+
+                        </div>
+
+
+                        <div class="live-event-content">
+
+                            <strong>
+                                New user registered
+                            </strong>
+
+                            <span>
+                                workspace@company.com joined the platform
+                            </span>
+
+                        </div>
+
+
+                        <small>
+                            just now
+                        </small>
+
+                    </div>
+
+
+
+                    <div class="live-event">
+
+                        <div class="live-event-icon purple">
+
+                            <i class="bi bi-kanban"></i>
+
+                        </div>
+
+
+                        <div class="live-event-content">
+
+                            <strong>
+                                Project created
+                            </strong>
+
+                            <span>
+                                SaaS Platform Redesign
+                            </span>
+
+                        </div>
+
+
+                        <small>
+                            24 sec
+                        </small>
+
+                    </div>
+
+
+
+                    <div class="live-event">
+
+                        <div class="live-event-icon green">
+
+                            <i class="bi bi-check-circle"></i>
+
+                        </div>
+
+
+                        <div class="live-event-content">
+
+                            <strong>
+                                Project completed
+                            </strong>
+
+                            <span>
+                                Team Collaboration
+                            </span>
+
+                        </div>
+
+
+                        <small>
+                            1 min
+                        </small>
+
+                    </div>
+
+
+
+                    <div class="live-event">
+
+                        <div class="live-event-icon orange">
+
+                            <i class="bi bi-credit-card"></i>
+
+                        </div>
+
+
+                        <div class="live-event-content">
+
+                            <strong>
+                                Subscription upgraded
+                            </strong>
+
+                            <span>
+                                Pro plan activated
+                            </span>
+
+                        </div>
+
+
+                        <small>
+                            2 min
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+        
+
+            <section class="analytics-insight-banner">
+
+                <div class="insight-banner-icon">
+
+                    <i class="bi bi-stars"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        PLATFORM INSIGHT
+                    </span>
+
+                    <h3>
+                        Engagement is trending upward.
+                    </h3>
+
+                    <p>
+                        Active users are up 8.6% this month,
+                        while average project activity has
+                        increased by 12.4%.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="adminreports.html"
+                    class="insight-report-btn"
+                >
+
+                    Open Report
+
+                    <i class="bi bi-arrow-up-right"></i>
+
+                </a>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"
+    ></script>
+
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"
+    ></script>
+
+
+
+    <script
+        src="adminanalytics.js"
+    ></script>
+
+</body>
+
+</html>
