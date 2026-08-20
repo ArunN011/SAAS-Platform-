@@ -3097,9 +3097,39 @@ span:nth-child(3) {
 
     border-radius:
         7px;
+        
 
 }
+.search-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
 
+.search-link:hover {
+    transform: translateY(-2px);
+}
+.dashboard-search a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.dashboard-search a:hover {
+    opacity: 0.8;
+}
+
+.dashboard-search i {
+    font-size: 18px;
+}
 
 .dashboard-icon-button {
 
